@@ -242,3 +242,11 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+scheduler_events = {
+    "hourly": [
+        "erpbiometric_sync.erpbiometric_sync.doctype.biometric_data_staging.biometric_data_staging.process_biometric_logs"
+    ],
+    "daily": [
+        "erpbiometric_sync.erpbiometric_sync.doctype.biometric_data_staging.biometric_data_staging.send_exceptional_report"
+    ]
+}
